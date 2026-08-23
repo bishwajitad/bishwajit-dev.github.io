@@ -1,0 +1,1459 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Bishwajit Adityadev - MERN Stack Developer with 3.5+ years of experience in React.js, Node.js, TypeScript, MongoDB, REST APIs and AWS."
+    >
+
+    <meta
+        name="keywords"
+        content="Bishwajit Adityadev, MERN Stack Developer, React Developer, Node.js Developer, Full Stack Developer, TypeScript, MongoDB, AWS"
+    >
+
+    <meta name="author" content="Bishwajit Adityadev">
+
+    <title>Bishwajit Adityadev | MERN Stack Developer</title>
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #4f46e5;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4f46e5;
+        }
+
+        .resume-btn {
+            padding: 10px 18px;
+            border: 2px solid #4f46e5;
+            border-radius: 8px;
+            color: #4f46e5 !important;
+        }
+
+        .resume-btn:hover {
+            background: #4f46e5;
+            color: white !important;
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(79, 70, 229, 0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f8faff
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hello {
+            color: #4f46e5;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.1;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #4f46e5;
+        }
+
+        .hero h2 {
+            font-size: clamp(24px, 4vw, 38px);
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 750px;
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid #4f46e5;
+            color: #4f46e5;
+        }
+
+        .btn-outline:hover {
+            background: #4f46e5;
+            color: white;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .section-line {
+            width: 60px;
+            height: 4px;
+            background: #4f46e5;
+            margin: 15px auto 0;
+            border-radius: 20px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 350px;
+            border-radius: 20px;
+            background: linear-gradient(
+                135deg,
+                #eef2ff,
+                #e0e7ff
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image i {
+            font-size: 110px;
+            color: #4f46e5;
+        }
+
+        .about-content h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .about-content p {
+            color: #6b7280;
+            margin-bottom: 18px;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .info-item {
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 10px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #111827;
+        }
+
+        .info-item span {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            border-color: #c7d2fe;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .skill-card i {
+            font-size: 28px;
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .experience-card {
+            border-left: 4px solid #4f46e5;
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .experience-card h3 {
+            font-size: 25px;
+            color: #111827;
+        }
+
+        .experience-card h4 {
+            color: #4f46e5;
+            margin: 5px 0;
+        }
+
+        .experience-date {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+            color: #6b7280;
+        }
+
+        .experience-card li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-image {
+            height: 180px;
+            background: linear-gradient(
+                135deg,
+                #4f46e5,
+                #7c3aed
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-image i {
+            font-size: 55px;
+            color: white;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tech {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            color: #4f46e5;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .education-card i {
+            font-size: 45px;
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .education-card h3 {
+            font-size: 25px;
+        }
+
+        .education-card p {
+            color: #6b7280;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background: #f9fafb;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-content h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-content p {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #d1d5db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #374151;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: #4f46e5;
+            color: white;
+            border-color: #4f46e5;
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                gap: 20px;
+                display: none;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 90px 0;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 27px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <div class="container">
+
+            <nav>
+
+                <a href="#home" class="logo">
+                    BA.
+                </a>
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="assets/resume.pdf"
+                            target="_blank"
+                            class="resume-btn"
+                        >
+                            Resume
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <p class="hello">
+                        Hello, I'm
+                    </p>
+
+                    <h1>
+                        Bishwajit <span>Adityadev</span>
+                    </h1>
+
+                    <h2>
+                        MERN Stack Developer
+                    </h2>
+
+                    <p class="hero-description">
+                        Software Developer with 3.5+ years of
+                        hands-on experience building modern,
+                        scalable and user-focused web applications
+                        using React.js, Node.js, TypeScript,
+                        MongoDB and REST APIs.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#projects"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-solid fa-code"></i>
+                            View Projects
+                        </a>
+
+                        <a
+                            href="assets/resume.pdf"
+                            target="_blank"
+                            class="btn btn-outline"
+                        >
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Download Resume
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        About Me
+                    </h2>
+
+                    <p>
+                        Get to know me
+                    </p>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-image">
+
+                        <!-- Replace this icon with your photo later -->
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <h3>
+                            Building modern web applications
+                        </h3>
+
+                        <p>
+                            I'm a Software Developer with
+                            3.5+ years of professional experience
+                            specializing in the MERN stack.
+                        </p>
+
+                        <p>
+                            I have hands-on experience developing
+                            responsive frontend applications,
+                            scalable backend services, REST APIs,
+                            database integrations and third-party
+                            API integrations.
+                        </p>
+
+                        <p>
+                            My primary technologies include
+                            React.js, Node.js, Express.js,
+                            MongoDB, TypeScript, Redux,
+                            Tailwind CSS and AWS.
+                        </p>
+
+
+                        <div class="about-info">
+
+                            <div class="info-item">
+                                <strong>Experience</strong>
+                                <span>3.5+ Years</span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong>Role</strong>
+                                <span>MERN Stack Developer</span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong>Location</strong>
+                                <span>Bengaluru, India</span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong>Availability</strong>
+                                <span>Open to Opportunities</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Technical Skills
+                    </h2>
+
+                    <p>
+                        Technologies I work with
+                    </p>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <i class="fa-brands fa-react"></i>
+
+                        <h3>
+                            Frontend
+                        </h3>
+
+                        <p>
+                            React.js, JavaScript,
+                            TypeScript, Redux,
+                            Redux Toolkit, Context API,
+                            HTML5, CSS3, Tailwind CSS,
+                            Bootstrap and Material UI.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fa-brands fa-node-js"></i>
+
+                        <h3>
+                            Backend
+                        </h3>
+
+                        <p>
+                            Node.js, Express.js,
+                            REST APIs, JWT,
+                            Socket.io, API integration
+                            and backend development.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <h3>
+                            Database
+                        </h3>
+
+                        <p>
+                            MongoDB, SQL,
+                            database design,
+                            queries and data management.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fa-brands fa-aws"></i>
+
+                        <h3>
+                            Cloud & Tools
+                        </h3>
+
+                        <p>
+                            AWS, Nginx, Git,
+                            GitHub, Postman,
+                            CI/CD and deployment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+
+        <section id="experience">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Experience
+                    </h2>
+
+                    <p>
+                        My professional journey
+                    </p>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <div class="experience">
+
+                    <div class="experience-card">
+
+                        <h3>
+                            Software Developer
+                        </h3>
+
+                        <h4>
+                            Jireh Software Solutions
+                        </h4>
+
+                        <p class="experience-date">
+                            3.5+ Years Experience
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Developed modern web applications
+                                using React.js, Node.js and MongoDB.
+                            </li>
+
+                            <li>
+                                Built and integrated RESTful APIs
+                                using Node.js and Express.js.
+                            </li>
+
+                            <li>
+                                Worked with TypeScript, Redux and
+                                Redux Toolkit for scalable frontend
+                                development.
+                            </li>
+
+                            <li>
+                                Developed responsive user interfaces
+                                using Tailwind CSS, Bootstrap and
+                                Material UI.
+                            </li>
+
+                            <li>
+                                Integrated third-party APIs and
+                                backend services.
+                            </li>
+
+                            <li>
+                                Used Git and GitHub for source
+                                control and team collaboration.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        Some of my work
+                    </p>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Budget Tracker Dashboard
+                            </h3>
+
+                            <p>
+                                A full-stack application for
+                                managing income, expenses and
+                                financial activities with an
+                                interactive dashboard.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span class="tech">
+                                    React.js
+                                </span>
+
+                                <span class="tech">
+                                    Node.js
+                                </span>
+
+                                <span class="tech">
+                                    MongoDB
+                                </span>
+
+                                <span class="tech">
+                                    Chart.js
+                                </span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live Demo
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Full Stack Web Application
+                            </h3>
+
+                            <p>
+                                A responsive web application
+                                featuring authentication,
+                                REST APIs and database integration.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span class="tech">
+                                    React
+                                </span>
+
+                                <span class="tech">
+                                    Node.js
+                                </span>
+
+                                <span class="tech">
+                                    Express
+                                </span>
+
+                                <span class="tech">
+                                    MongoDB
+                                </span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Live Demo
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <div class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fa-solid fa-server"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                REST API Platform
+                            </h3>
+
+                            <p>
+                                Backend API platform built with
+                                Node.js and Express.js with
+                                authentication and database
+                                integration.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span class="tech">
+                                    Node.js
+                                </span>
+
+                                <span class="tech">
+                                    Express.js
+                                </span>
+
+                                <span class="tech">
+                                    MongoDB
+                                </span>
+
+                                <span class="tech">
+                                    JWT
+                                </span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Education
+                    </h2>
+
+                    <div class="section-line"></div>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>
+                        Master of Computer Applications
+                    </h3>
+
+                    <p>
+                        MCA
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="contact-section"
+        >
+
+            <div class="container">
+
+                <div class="contact-content">
+
+                    <div class="section-title">
+
+                        <h2>
+                            Let's Connect
+                        </h2>
+
+                        <p>
+                            I'm open to exciting
+                            software development opportunities.
+                        </p>
+
+                        <div class="section-line"></div>
+
+                    </div>
+
+
+                    <a
+                        href="mailto:your-email@gmail.com"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-solid fa-envelope"></i>
+                        Contact Me
+                    </a>
+
+
+                    <div class="social-links">
+
+                        <!-- Replace # with your actual URLs -->
+
+                        <a
+                            href="https://github.com/bishwajit-dev"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="mailto:your-email@gmail.com"
+                            class="social-link"
+                            aria-label="Email"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span>
+                Bishwajit Adityadev.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+
+        // Close mobile menu after clicking a link
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+        // Current year
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
+```
